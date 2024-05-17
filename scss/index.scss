@@ -5,37 +5,31 @@ a{
 
 #hd{
     .gnb{
-        .gnb_li{
-            &:hover{
-                .gnb_a{
+        &:hover{
+            .gnb_li{
+                padding: 0 40px !important;
+                left: 35px;
+                &:hover{
+                    .gnb_a{
                     color: red; //활성화
+                    }
                 }
                 .gnb_ul{
-                    max-height: 180px;
-                    border-radius: 0 0 20px 20px;
-                    border-bottom: 1px solid #ccc;
+                    height: 180px;
                 }
-            }
+            }   
+        }
+        .gnb_li{
+            padding: 0 40px !important;
+            left: 35px;
             .gnb_a{
                 font-size: 1.2rem;
             }
             .gnb_ul{
                 min-width: 10rem;
-                // padding: 0 1.5rem;
-                background-color: white;
-                margin-top: -1px;
-                border: 1px solid #ccc;
-                border-top:0;
-                border-bottom: 0;
-                border-radius: 0;
-                // overflow: hidden;
-                // 모든 소메뉴 대메뉴를 기준으로 가운데
-                transform: translateX(-50%);
-                left: 50%;
-                // 드롭 애니메이션
-                max-height: 0;
+                height: 0;
                 overflow: hidden;
-                transition: max-height 1s ease, border-radius 0.5s ease 0.6s;
+                transition: 0.5s;
                 &:after,
                 &:before{
                     content: "";
@@ -43,11 +37,9 @@ a{
                     height: 1rem;
                 }
                 &:after{
-                    // transition-delay: 0.3s;
-                    // border-radius: 0 0 10px 10px;
-                    // border-bottom: 1px solid #ccc;
+
                 }
             }
         }
-    }
+    }   
 }
